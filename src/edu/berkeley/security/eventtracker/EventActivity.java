@@ -204,9 +204,6 @@ abstract public class EventActivity extends Activity {
 		case R.id.settings_option:
 			startActivity(Settings.class);
 			return true;
-		case R.id.debug_option:
-			startActivity(Debugging.class);
-			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}

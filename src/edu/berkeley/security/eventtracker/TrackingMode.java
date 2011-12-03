@@ -137,6 +137,7 @@ public class TrackingMode extends AbstractEventEdit {
 		eventNotesButton.setEnabled(isTracking);
 		int image = isTracking ? R.drawable.maps_on : R.drawable.maps_off;
 		viewMapButton.setImageResource(image);
+	        viewMapButton.setEnabled(isTracking);
 		dropDown.setEnabled(isTracking);
 		newTagButton.setEnabled(isTracking);
 		dropDown.setSelection(0);
@@ -297,9 +298,9 @@ public class TrackingMode extends AbstractEventEdit {
 
 			@Override
 			public void onClick(View v) {
-
-				if (currentEvent.getGPSCoordinates().size() == 0) {
-					Toast.makeText(getApplicationContext(), "No data yet", Toast.LENGTH_SHORT)
+			        
+				if (currentEvent == null || currentEvent.getGPSCoordinates().size() == 0) {
+					Toast.makeText(getApplicationContext(), "No data available", Toast.LENGTH_SHORT)
 							.show();
 				} else {
 

@@ -99,7 +99,7 @@ public class EditMode extends AbstractEventEdit {
 			public void onClick(View v) {
 
 				if (editingEvent.getGPSCoordinates().size() == 0) {
-					Toast.makeText(getApplicationContext(), "No data yet", Toast.LENGTH_SHORT)
+					Toast.makeText(getApplicationContext(), "No data available", Toast.LENGTH_SHORT)
 							.show();
 				} else {
 					Intent myIntent = new Intent(EditMode.this, GoogleMaps.class);
